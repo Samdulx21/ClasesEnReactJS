@@ -1,23 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Contact } from '../../models/Contact_class'
+import { Contacto } from '../../models/ContactClass'
+import ContactStatus from '../container/ContactStatus'
 
-const ContactComponent = ({ contact }) => {
+const ContactComponent = ({ contacto }) => {
     return (
-        <div>
-            <h2>Nombre: { contact.name }</h2>
-            <h2>Apellido: { contact.lastname }</h2>
-
-            <h4>Email: { contact.email }</h4>
-
-            <h5>Estado: { contact.status ? 'on-line' : 'off-line' }</h5>
-
-        </div>
+    <div>
+        <h2>Nombre: {contacto.nombre}</h2>
+        <h3>Apellidos: {contacto.apellido}</h3>
+        <h3>Email: {contacto.email}</h3>
+        <ContactStatus estado={true} />
+    </div>
     )
 }
 
 ContactComponent.propTypes = {
-    contact: PropTypes.instanceOf(Contact)
+    contacto: PropTypes.instanceOf(Contacto)
 }
 
 export default ContactComponent

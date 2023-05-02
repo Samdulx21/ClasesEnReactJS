@@ -1,12 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import Greeting from './components/pure/Greeting'
-import FuncGreeting from './components/pure/FuncGreeting';
-import TaskListComponent from './components/container/Task_list';
-import ContactUserComponent from './components/container/Contact_user';
-import ContactUser from './components/container/Contact_user';
+// import Greeting from './components/pure/Greeting'
+// import FuncGreeting from './components/pure/FuncGreeting';
+// import TaskListComponent from './components/container/Task_list';
+import  ContactComponent  from './components/pure/ContactComponent';
 
 function App() {
+
+  const contactoPrueba = {
+    nombre: 'Fulanito',
+    apellido: 'de OpenBootcamp',
+    email: 'fulanito@open-bootcamp.com',
+    conectado: false,
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +24,7 @@ function App() {
         {/* <FuncGreeting name='samuel' /> */}
         {/* Componente de listado de tareas */}
         {/* <TaskListComponent /> */}
-        <ContactUser />
+        <ContactComponent contacto={contactoPrueba} />
       </header>
     </div>
   );
